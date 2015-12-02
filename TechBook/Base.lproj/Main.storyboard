@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="TechBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="50" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="wde-0L-bzC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SigunUpTableCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="SigunUpTableCell" id="9dB-4K-3O4" customClass="SigunUpTableCell" customModule="TechBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9dB-4K-3O4" id="sim-K0-8V3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-yh-atb">
+                                                    <rect key="frame" x="40" y="7" width="520" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yHC-yh-atb" secondAttribute="trailing" constant="7" id="IsL-lP-4Pe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yHC-yh-atb" secondAttribute="bottom" constant="-1" id="QhQ-es-Yi7"/>
+                                                <constraint firstItem="yHC-yh-atb" firstAttribute="leading" secondItem="sim-K0-8V3" secondAttribute="leadingMargin" constant="32" id="S6h-LF-Guv"/>
+                                                <constraint firstItem="yHC-yh-atb" firstAttribute="leading" secondItem="sim-K0-8V3" secondAttribute="leadingMargin" constant="5" id="cQH-gN-9sg"/>
+                                                <constraint firstItem="yHC-yh-atb" firstAttribute="leading" secondItem="sim-K0-8V3" secondAttribute="leadingMargin" constant="7" id="k8M-oo-kCH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yHC-yh-atb" secondAttribute="trailing" constant="32" id="ti8-wF-U69"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yHC-yh-atb" secondAttribute="trailing" id="ym4-B6-Gbe"/>
+                                                <constraint firstItem="yHC-yh-atb" firstAttribute="top" secondItem="sim-K0-8V3" secondAttribute="topMargin" constant="-1" id="zlm-0s-rZg"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="IsL-lP-4Pe"/>
+                                                    <exclude reference="cQH-gN-9sg"/>
+                                                    <exclude reference="k8M-oo-kCH"/>
+                                                    <exclude reference="ym4-B6-Gbe"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="textFld" destination="yHC-yh-atb" id="Zbo-CY-tcS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="T9P-cx-Geo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ah8-32-Nnm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wde-0L-bzC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="7g0-cR-MwH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wde-0L-bzC" secondAttribute="trailing" constant="-20" id="FKK-Hb-3fV"/>
+                            <constraint firstItem="wde-0L-bzC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="XIB-h9-bnr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wde-0L-bzC" secondAttribute="bottom" id="g29-2Z-Fi0"/>
+                            <constraint firstItem="wde-0L-bzC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gR7-Gz-1CJ"/>
+                            <constraint firstItem="wde-0L-bzC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gWN-Vp-Phz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7g0-cR-MwH"/>
+                                <exclude reference="XIB-h9-bnr"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="signUpTable" destination="wde-0L-bzC" id="EA1-cB-Sgi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="268"/>
+        </scene>
+        <!--Techies View Controller-->
+        <scene sceneID="tOh-lk-auc">
+            <objects>
+                <viewController storyboardIdentifier="TechiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="6Uw-9j-2jD" customClass="TechiesViewController" customModule="TechBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yet-U5-oGu"/>
+                        <viewControllerLayoutGuide type="bottom" id="edE-aI-g39"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Wl-CU-vRr">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="njr-UD-L8k">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kaz-Us-FI7">
+                                    <size key="itemSize" width="290" height="227"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCollectionCell" id="7ug-vT-QBx" customClass="UserCollectionCell" customModule="TechBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="227"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="227"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Uw-9j-2jD" id="vXZ-gD-CGM"/>
+                                    <outlet property="delegate" destination="6Uw-9j-2jD" id="tlZ-oL-dWf"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="njr-UD-L8k" secondAttribute="trailing" constant="-20" id="9jh-hY-8Wm"/>
+                            <constraint firstItem="njr-UD-L8k" firstAttribute="top" secondItem="yet-U5-oGu" secondAttribute="bottom" id="NCa-up-CKd"/>
+                            <constraint firstItem="edE-aI-g39" firstAttribute="top" secondItem="njr-UD-L8k" secondAttribute="bottom" id="i1a-9R-5fd"/>
+                            <constraint firstItem="njr-UD-L8k" firstAttribute="leading" secondItem="9Wl-CU-vRr" secondAttribute="leadingMargin" constant="-20" id="mWN-VS-lOf"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvf-Rm-ckQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="268"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="VV1-lb-5tY">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="lnv-qJ-r5D" customClass="MapViewController" customModule="TechBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Srq-lX-39i"/>
+                        <viewControllerLayoutGuide type="bottom" id="ic4-yV-2XS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kvw-eW-94N">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-U4-qKR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="ic4-yV-2XS" firstAttribute="top" secondItem="OdH-U4-qKR" secondAttribute="bottom" id="6UX-ml-oa0"/>
+                            <constraint firstItem="OdH-U4-qKR" firstAttribute="leading" secondItem="kvw-eW-94N" secondAttribute="leadingMargin" constant="-20" id="KOg-sg-a7A"/>
+                            <constraint firstItem="OdH-U4-qKR" firstAttribute="top" secondItem="Srq-lX-39i" secondAttribute="bottom" id="Spq-7y-5d6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OdH-U4-qKR" secondAttribute="trailing" constant="-20" id="mKc-AO-k2u"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Me7-DD-s6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="268"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="2Jv-NR-KoM">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="aJ1-u2-Xe7" customClass="ChatViewController" customModule="TechBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h07-SZ-k0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEh-Mb-Lrp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zE-lC-FVA">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2IP-NT-AHn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMQ-wa-eQF">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ozh-E0-2vH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYf-ac-9El" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="268"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="wIv-UX-VeR">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="9Ke-OG-IKQ" customClass="ProfileViewController" customModule="TechBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vhQ-oX-zQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="8kP-es-uWZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ccQ-39-kO9">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L6V-1Y-NOT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRm-3H-B83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="268"/>
+        </scene>
+    </scenes>
+</document>
