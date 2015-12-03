@@ -15,12 +15,18 @@ class ChatListViewController: TBBaseViewController {
 
         self.navigationItem.title = "Conversations"
         self.view.backgroundColor = UIColor(netHex:0x42454A)
+        self.setUpNavigationView()
         self.initializeVariables()
     }
     
     func initializeVariables()
     {
         
+    }
+    
+    func setUpNavigationView()
+    {
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: ""), animated: true)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int

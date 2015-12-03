@@ -49,9 +49,9 @@ class TechiesViewController: TBBaseViewController {
         
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("UserCollectionCell", forIndexPath: indexPath) as! UserCollectionCell
 
-        cell.layer.borderWidth = 2
+        cell.layer.borderWidth = 0.1
         cell.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.layer.cornerRadius = 3
+        cell.layer.cornerRadius = 1
         
         return cell ?? UserCollectionCell()
     }
@@ -61,7 +61,7 @@ class TechiesViewController: TBBaseViewController {
     {
         let totalPadding : CGFloat = (NUMBER_OF_COLUMNS + 1) * PADDING
         let widthToHeigthRatio : CGFloat = 1
-        let cellWidth = (self.view.bounds.size.width - 20 - totalPadding) / NUMBER_OF_COLUMNS
+        let cellWidth = (self.view.bounds.size.width - NUMBER_OF_COLUMNS*10 - totalPadding) / NUMBER_OF_COLUMNS
         let cellHeight = cellWidth * widthToHeigthRatio
         return CGSizeMake(cellWidth, cellHeight)
     }

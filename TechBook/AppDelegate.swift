@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
        
         self.cutomizeNavigationBarAppearence()
-        
+        self.startLocationManager()
         if ((GeneralUtitlity.getValueFromUserDefaults(LOGGEDIN_TAG)) != nil)
         {
             self.navigateToHomePage()
@@ -93,7 +93,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = tabVC
         
     }
-    
+    func startLocationManager()
+    {
+        if(CLLocationManager.locationServicesEnabled()){
+            
+            if(CLLocationManager.authorizationStatus() ==   CLAuthorizationStatus.Denied){
+                
+               //Denied permision
+            }
+        }
+
+    }
     
     func navigateToRegisterScreen()
     {

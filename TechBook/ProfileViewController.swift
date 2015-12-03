@@ -18,6 +18,7 @@ class ProfileViewController: TBBaseViewController {
 
         self.navigationItem.title = "Profile"
         self.view.backgroundColor = UIColor(netHex:0x42454A)
+        self.setUpNavigationView()
         self.initializeVariables()
     }
     
@@ -26,6 +27,11 @@ class ProfileViewController: TBBaseViewController {
         
     }
 
+    func setUpNavigationView()
+    {
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: ""), animated: true)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1;
@@ -61,19 +67,6 @@ class ProfileViewController: TBBaseViewController {
             return cell
             
         }
-//        else
-//        {
-//            let cell:ProfileTableCell = tableView.dequeueReusableCellWithIdentifier("ProfileTableCell") as! ProfileTableCell
-//            cell.clipsToBounds = true
-//            cell.backgroundColor = UIColor.clearColor();
-//            cell.titlLbl.text = placeHolderArray[indexPath.row] as? String
-//            cell.valueLbl.text = valueArray[indexPath.row] as? String
-//            //cell.bgImageView.layer.borderColor = UIColor.lightGrayColor().CGColor
-//            //cell.bgImageView.layer.borderWidth = 1.0
-//            cell.bgImageView.backgroundColor = UIColor.clearColor()
-//            return cell
-//
-//        }
 
         return UITableViewCell()
     }
