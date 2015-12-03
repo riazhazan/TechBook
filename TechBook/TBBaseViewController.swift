@@ -1,19 +1,18 @@
 //
-//  TBTabViewController.swift
+//  TBBaseViewController.swift
 //  TechBook
 //
-//  Created by Riaz Hassan on 02/12/15.
+//  Created by Riaz Hassan on 03/12/15.
 //  Copyright © 2015 Riaz Hassan. All rights reserved.
 //
 
 import UIKit
 
-class TBTabViewController: UITabBarController {
+class TBBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(netHex:0x42454A)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,9 +21,6 @@ class TBTabViewController: UITabBarController {
     }
     
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-       return UIStatusBarStyle.LightContent
-    }
     /*
     // MARK: - Navigation
 

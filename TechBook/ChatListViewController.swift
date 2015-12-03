@@ -1,56 +1,56 @@
 //
-//  ViewController.swift
+//  ChatListViewController.swift
 //  TechBook
 //
-//  Created by Riaz Hassan on 01/12/15.
+//  Created by Riaz Hassan on 03/12/15.
 //  Copyright © 2015 Riaz Hassan. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: TBBaseViewController {
+class ChatListViewController: TBBaseViewController {
 
-    @IBOutlet var signUpTable: UITableView!
-
-    var placeHolderArray :NSMutableArray = NSMutableArray()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Login"
+
+        self.navigationItem.title = "Conversations"
+        self.view.backgroundColor = UIColor(netHex:0x42454A)
         self.initializeVariables()
     }
-
+    
     func initializeVariables()
     {
-        placeHolderArray = ["First Name", "Last Name", "DOB", "Mobile Number", "Country", "Email (Optional)"]
+        
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1;
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 6;
+        return 10;
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
-        return 45
+        
+        return 70
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        let cell:SigunUpTableCell = tableView.dequeueReusableCellWithIdentifier("SigunUpTableCell") as! SigunUpTableCell
+        let cell:ProfileTableCell = tableView.dequeueReusableCellWithIdentifier("ProfileTableCell") as! ProfileTableCell
         cell.clipsToBounds = true
         cell.backgroundColor = UIColor.clearColor();
-        cell.textFld.tag = indexPath.row
-        cell.textFld.placeholder = placeHolderArray[indexPath.row] as? String
+        cell.titlLbl.text = "Ben Johnson"
+        cell.valueLbl.text = "Hi Man, I found you."
+        cell.bgImageView.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.bgImageView.layer.borderWidth = 1.0
+        cell.bgImageView.layer.cornerRadius = 22
+        cell.bgImageView.layer.masksToBounds = true
+        cell.bgImageView.backgroundColor = UIColor.clearColor()
         return cell
-        
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -59,6 +59,7 @@ class ViewController: TBBaseViewController {
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         
         let headerCell = UIView(frame: CGRectMake(0,0, tableView.frame.size.width, 120));
         
@@ -72,17 +73,19 @@ class ViewController: TBBaseViewController {
         headerButton.layer.cornerRadius = 45
         headerButton.addTarget(self, action: "headerClicked:", forControlEvents: .TouchUpInside)
         
+        
+        
         headerCell.addSubview(headerButton)
         
         return headerCell
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 120
+        return 0
     }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     {
-        return 70;
+        return 0;
     }
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -103,26 +106,20 @@ class ViewController: TBBaseViewController {
         
         return headerCell
     }
-
-    
-    
-    func headerClicked(sender:UIButton)
-    {
- 
-//            let sections = NSIndexSet(index: previousClickedHeader)
-//            
-//            self.favouritesTableView.reloadSections(sections, withRowAnimation: .Fade)
-      
-        
-    }
-
-    func registerButtonAction(sender:UIButton)
-    {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        GeneralUtitlity.setValueInUserDefaults(LOGGEDIN_TAG, value: true)
-        appDelegate.navigateToHomePage()
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
-

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		640C0A3EE7067C5DC64DAF1F /* libPods-TechBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F1D7FB3A47B3AB3AFF9BE /* libPods-TechBook.a */; };
+		9C5B5A9E1C10122B00002688 /* TBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B5A9D1C10122B00002688 /* TBBaseViewController.swift */; };
+		9C5B5AA01C1021FF00002688 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B5A9F1C1021FF00002688 /* ChatListViewController.swift */; };
 		9C783E921C0EC5DC003E55BF /* TechiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E911C0EC5DC003E55BF /* TechiesViewController.swift */; };
 		9C783E961C0ECA85003E55BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E951C0ECA85003E55BF /* MapViewController.swift */; };
 		9C783E981C0ECA9A003E55BF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E971C0ECA9A003E55BF /* ChatViewController.swift */; };
@@ -17,6 +19,7 @@
 		9CBD93221C0ED78F00B43A7E /* TBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD93211C0ED78F00B43A7E /* TBConstants.swift */; };
 		9CBD93241C0EDA2900B43A7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBD93231C0EDA2900B43A7E /* MapKit.framework */; };
 		9CBD93261C0EE10C00B43A7E /* UserCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD93251C0EE10C00B43A7E /* UserCollectionCell.swift */; };
+		9CEBB2EC1C0F06890097DD9B /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEBB2EB1C0F06890097DD9B /* ProfileTableCell.swift */; };
 		9CEFFDCC1C0D9F05007253E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFFDCB1C0D9F05007253E8 /* AppDelegate.swift */; };
 		9CEFFDCE1C0D9F05007253E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFFDCD1C0D9F05007253E8 /* ViewController.swift */; };
 		9CEFFDD11C0D9F05007253E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEFFDCF1C0D9F05007253E8 /* Main.storyboard */; };
@@ -49,6 +52,8 @@
 /* Begin PBXFileReference section */
 		0C3F1D7FB3A47B3AB3AFF9BE /* libPods-TechBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TechBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9317A3F1F390B662E4EAAD /* Pods-TechBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechBook/Pods-TechBook.release.xcconfig"; sourceTree = "<group>"; };
+		9C5B5A9D1C10122B00002688 /* TBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBBaseViewController.swift; sourceTree = "<group>"; };
+		9C5B5A9F1C1021FF00002688 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		9C783E911C0EC5DC003E55BF /* TechiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechiesViewController.swift; sourceTree = "<group>"; };
 		9C783E951C0ECA85003E55BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9C783E971C0ECA9A003E55BF /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,8 @@
 		9CBD93211C0ED78F00B43A7E /* TBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBConstants.swift; sourceTree = "<group>"; };
 		9CBD93231C0EDA2900B43A7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9CBD93251C0EE10C00B43A7E /* UserCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionCell.swift; sourceTree = "<group>"; };
+		9CEBB2E81C0EEE430097DD9B /* TechBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		9CEBB2EB1C0F06890097DD9B /* ProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		9CEFFDC81C0D9F05007253E8 /* TechBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEFFDCB1C0D9F05007253E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CEFFDCD1C0D9F05007253E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,15 +151,19 @@
 				9C783E911C0EC5DC003E55BF /* TechiesViewController.swift */,
 				9C783E951C0ECA85003E55BF /* MapViewController.swift */,
 				9C783E971C0ECA9A003E55BF /* ChatViewController.swift */,
+				9C5B5A9F1C1021FF00002688 /* ChatListViewController.swift */,
 				9C783E991C0ECAA8003E55BF /* ProfileViewController.swift */,
 				9C783E9B1C0ECB65003E55BF /* TBTabViewController.swift */,
 				9CBD93251C0EE10C00B43A7E /* UserCollectionCell.swift */,
+				9CEBB2EB1C0F06890097DD9B /* ProfileTableCell.swift */,
+				9C5B5A9D1C10122B00002688 /* TBBaseViewController.swift */,
 				9CEFFDFC1C0DA407007253E8 /* Utilities */,
 				9CEFFDCF1C0D9F05007253E8 /* Main.storyboard */,
 				9CEFFDD51C0D9F05007253E8 /* Assets.xcassets */,
 				9CEFFDD71C0D9F05007253E8 /* LaunchScreen.storyboard */,
 				9CEFFDDA1C0D9F05007253E8 /* Info.plist */,
 				9CEFFDD21C0D9F05007253E8 /* TechBook.xcdatamodeld */,
+				9CEBB2E81C0EEE430097DD9B /* TechBook-Bridging-Header.h */,
 			);
 			path = TechBook;
 			sourceTree = "<group>";
@@ -376,7 +387,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEBB2EC1C0F06890097DD9B /* ProfileTableCell.swift in Sources */,
 				9CBD931E1C0ED4EF00B43A7E /* GeneralUtitlity.swift in Sources */,
+				9C5B5AA01C1021FF00002688 /* ChatListViewController.swift in Sources */,
 				9C783E9C1C0ECB65003E55BF /* TBTabViewController.swift in Sources */,
 				9C783E921C0EC5DC003E55BF /* TechiesViewController.swift in Sources */,
 				9CEFFE001C0DA4DC007253E8 /* ColorUtility.swift in Sources */,
@@ -386,6 +399,7 @@
 				9CBD93221C0ED78F00B43A7E /* TBConstants.swift in Sources */,
 				9CEFFDCC1C0D9F05007253E8 /* AppDelegate.swift in Sources */,
 				9C783E9A1C0ECAA8003E55BF /* ProfileViewController.swift in Sources */,
+				9C5B5A9E1C10122B00002688 /* TBBaseViewController.swift in Sources */,
 				9CEFFDD41C0D9F05007253E8 /* TechBook.xcdatamodeld in Sources */,
 				9C783E961C0ECA85003E55BF /* MapViewController.swift in Sources */,
 				9CBD93261C0EE10C00B43A7E /* UserCollectionCell.swift in Sources */,
@@ -531,11 +545,14 @@
 			baseConfigurationReference = FDCBA0F9F203932C603E1965 /* Pods-TechBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TechBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TechBook.TechBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TechBook/TechBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -544,11 +561,13 @@
 			baseConfigurationReference = 3A9317A3F1F390B662E4EAAD /* Pods-TechBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TechBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TechBook.TechBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TechBook/TechBook-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -11,11 +11,12 @@ import UIKit
 let NUMBER_OF_COLUMNS = CGFloat(2)
 let PADDING = CGFloat(2)
 
-class TechiesViewController: UIViewController {
+class TechiesViewController: TBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Techies"
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.navigationItem.title = "Techies"
         self.initializeVariables()
     }
     
@@ -44,6 +45,9 @@ class TechiesViewController: UIViewController {
         
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("UserCollectionCell", forIndexPath: indexPath) as! UserCollectionCell
 
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.layer.cornerRadius = 3
         
         return cell ?? UserCollectionCell()
     }
@@ -53,7 +57,7 @@ class TechiesViewController: UIViewController {
     {
         let totalPadding : CGFloat = (NUMBER_OF_COLUMNS + 1) * PADDING
         let widthToHeigthRatio : CGFloat = 1
-        let cellWidth = (self.view.bounds.size.width - totalPadding) / NUMBER_OF_COLUMNS
+        let cellWidth = (self.view.bounds.size.width - 20 - totalPadding) / NUMBER_OF_COLUMNS
         let cellHeight = cellWidth * widthToHeigthRatio
         return CGSizeMake(cellWidth, cellHeight)
     }

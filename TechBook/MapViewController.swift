@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: TBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Map"
+        self.navigationItem.title = "Map"
         self.initializeVariables()
     }
     
