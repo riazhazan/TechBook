@@ -19,4 +19,11 @@ class GeneralUtitlity: NSObject {
         let storedVal:AnyObject?  = NSUserDefaults.standardUserDefaults().valueForKey(key)
         return storedVal
     }
+    
+    class func setPaddingtoTextField (textField:UITextField) {
+        let paddingView = UIView(frame: CGRectMake(0, 0, 10, 20));
+        textField.leftView = paddingView;
+        textField.leftViewMode = UITextFieldViewMode.Always;
+    }
+
 }
