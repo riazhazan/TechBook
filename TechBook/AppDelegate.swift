@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func cutomizeNavigationBarAppearence()
     {
         
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         UIApplication.sharedApplication().statusBarStyle = .Default
         let themeColor = UIColor(netHex:0x42454A)//UIColor(netHex:0x66CCFF)
         UINavigationBar.appearance().translucent = false

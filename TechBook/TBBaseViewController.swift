@@ -13,6 +13,8 @@ class TBBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(netHex:0x42454A)
+        self.setNeedsStatusBarAppearanceUpdate()
+        self.navigationController!.navigationBar.barStyle = UIBarStyle.Black;
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,7 +22,9 @@ class TBBaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
     /*
     // MARK: - Navigation
 

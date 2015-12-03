@@ -22,9 +22,6 @@ class TBTabViewController: UITabBarController {
     }
     
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-       return UIStatusBarStyle.LightContent
-    }
     /*
     // MARK: - Navigation
 
