@@ -54,7 +54,10 @@ class ChatListViewController: TBBaseViewController {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chatVC :ChatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController
+        self.navigationController?.pushViewController(chatVC, animated: true)
         
     }
     

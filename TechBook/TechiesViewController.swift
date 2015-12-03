@@ -13,9 +13,11 @@ let PADDING = CGFloat(2)
 
 class TechiesViewController: TBBaseViewController {
 
+    @IBOutlet var usersCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.automaticallyAdjustsScrollViewInsets = false
+        self.setUpNavigationItems()
         self.navigationItem.title = "Techies"
         self.initializeVariables()
     }
@@ -24,14 +26,16 @@ class TechiesViewController: TBBaseViewController {
     {
        
     }
+    
+    func setUpNavigationItems()
+    {
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "ClickedMe"), animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section:Int)->Int
     {
@@ -63,11 +67,13 @@ class TechiesViewController: TBBaseViewController {
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC :ProfileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: PADDING, bottom: 55, right: PADDING)
+    private let sectionInsets = UIEdgeInsets(top: 10.0, left: PADDING, bottom: 10, right: PADDING)
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
