@@ -13,6 +13,7 @@ class ProfileTableCell: UITableViewCell {
     @IBOutlet var valueLbl: UILabel!
     @IBOutlet var titlLbl: UILabel!
     @IBOutlet var bgImageView: UIView!
+    @IBOutlet var badgeLbl: UILabel!
 }
 
 

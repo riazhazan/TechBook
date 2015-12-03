@@ -82,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController3 : UINavigationController = UINavigationController(rootViewController: chatVC)
         navController3.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "comments"), tag: 0)
         navController3.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        navController3.tabBarItem.badgeValue = "9"
         
         let navController4 : UINavigationController = UINavigationController(rootViewController: profileVC)
         navController4.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "user"), tag: 0)

@@ -52,8 +52,10 @@ class ChatListViewController: TBBaseViewController {
         cell.valueLbl.text = "Hi Man, I found you."
         cell.bgImageView.layer.borderColor = UIColor.whiteColor().CGColor
         cell.bgImageView.layer.borderWidth = 1.0
-        cell.bgImageView.layer.cornerRadius = 22
+        cell.bgImageView.layer.cornerRadius = cell.bgImageView.frame.size.width/2
         cell.bgImageView.layer.masksToBounds = true
+        cell.badgeLbl.layer.cornerRadius = cell.badgeLbl.frame.size.width/2
+        cell.badgeLbl.layer.masksToBounds = true
         cell.bgImageView.backgroundColor = UIColor.clearColor()
         return cell
 

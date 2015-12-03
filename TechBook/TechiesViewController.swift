@@ -61,7 +61,7 @@ class TechiesViewController: TBBaseViewController {
     {
         let totalPadding : CGFloat = (NUMBER_OF_COLUMNS + 1) * PADDING
         let widthToHeigthRatio : CGFloat = 1
-        let cellWidth = (self.view.bounds.size.width - NUMBER_OF_COLUMNS*10 - totalPadding) / NUMBER_OF_COLUMNS
+        let cellWidth = (self.view.bounds.size.width - NUMBER_OF_COLUMNS*10 - totalPadding) / NUMBER_OF_COLUMNS - 3
         let cellHeight = cellWidth * widthToHeigthRatio
         return CGSizeMake(cellWidth, cellHeight)
     }
@@ -73,7 +73,7 @@ class TechiesViewController: TBBaseViewController {
     }
     
     
-    private let sectionInsets = UIEdgeInsets(top: 10.0, left: PADDING, bottom: 10, right: PADDING)
+    private let sectionInsets = UIEdgeInsets(top: 10.0, left: PADDING*7, bottom: 10, right: PADDING*7)
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
