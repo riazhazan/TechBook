@@ -10,6 +10,10 @@ import UIKit
 
 class MapViewController: TBBaseViewController {
 
+    @IBOutlet var mapView: MKMapView!
+    var locManager:TBLocationManager?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Map"
@@ -18,8 +22,10 @@ class MapViewController: TBBaseViewController {
     
     func initializeVariables()
     {
-        
+       self.locManager = TBLocationManager()
+       self.mapView.showsUserLocation = true
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

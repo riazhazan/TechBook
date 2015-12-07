@@ -15,6 +15,7 @@
 		9C783E981C0ECA9A003E55BF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E971C0ECA9A003E55BF /* ChatViewController.swift */; };
 		9C783E9A1C0ECAA8003E55BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E991C0ECAA8003E55BF /* ProfileViewController.swift */; };
 		9C783E9C1C0ECB65003E55BF /* TBTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C783E9B1C0ECB65003E55BF /* TBTabViewController.swift */; };
+		9C9154231C157C4D00787DE1 /* TBLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9154221C157C4D00787DE1 /* TBLocationManager.swift */; };
 		9CBD931E1C0ED4EF00B43A7E /* GeneralUtitlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD931D1C0ED4EF00B43A7E /* GeneralUtitlity.swift */; };
 		9CBD93221C0ED78F00B43A7E /* TBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD93211C0ED78F00B43A7E /* TBConstants.swift */; };
 		9CBD93241C0EDA2900B43A7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBD93231C0EDA2900B43A7E /* MapKit.framework */; };
@@ -59,6 +60,7 @@
 		9C783E971C0ECA9A003E55BF /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		9C783E991C0ECAA8003E55BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9C783E9B1C0ECB65003E55BF /* TBTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBTabViewController.swift; sourceTree = "<group>"; };
+		9C9154221C157C4D00787DE1 /* TBLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBLocationManager.swift; sourceTree = "<group>"; };
 		9CBD931D1C0ED4EF00B43A7E /* GeneralUtitlity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralUtitlity.swift; sourceTree = "<group>"; };
 		9CBD93211C0ED78F00B43A7E /* TBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBConstants.swift; sourceTree = "<group>"; };
 		9CBD93231C0EDA2900B43A7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 		9CEFFDFC1C0DA407007253E8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9C9154221C157C4D00787DE1 /* TBLocationManager.swift */,
 				9CEFFDFF1C0DA4DC007253E8 /* ColorUtility.swift */,
 				9CBD931D1C0ED4EF00B43A7E /* GeneralUtitlity.swift */,
 				9CBD93211C0ED78F00B43A7E /* TBConstants.swift */,
@@ -394,6 +397,7 @@
 				9C783E921C0EC5DC003E55BF /* TechiesViewController.swift in Sources */,
 				9CEFFE001C0DA4DC007253E8 /* ColorUtility.swift in Sources */,
 				9C783E981C0ECA9A003E55BF /* ChatViewController.swift in Sources */,
+				9C9154231C157C4D00787DE1 /* TBLocationManager.swift in Sources */,
 				9CEFFE021C0DB6E9007253E8 /* SigunUpTableCell.swift in Sources */,
 				9CEFFDCE1C0D9F05007253E8 /* ViewController.swift in Sources */,
 				9CBD93221C0ED78F00B43A7E /* TBConstants.swift in Sources */,

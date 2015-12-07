@@ -218,6 +218,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-U4-qKR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="lnv-qJ-r5D" id="VCi-v9-nhz"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <animations/>
@@ -229,6 +232,9 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="OdH-U4-qKR" id="10i-0q-Vpa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Me7-DD-s6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
