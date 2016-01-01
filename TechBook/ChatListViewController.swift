@@ -18,6 +18,7 @@ class ChatListViewController: TBBaseViewController {
         self.setUpNavigationView()
         self.initializeVariables()
     }
+<<<<<<< HEAD
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
@@ -26,6 +27,8 @@ class ChatListViewController: TBBaseViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
+=======
+>>>>>>> 850b97f975f3db997bb09dfaea6ca1b601a7ffcd
     
     func initializeVariables()
     {
@@ -73,9 +76,14 @@ class ChatListViewController: TBBaseViewController {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let chatVC :ChatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController
+<<<<<<< HEAD
         self.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(chatVC, animated: true)
         self.hidesBottomBarWhenPushed = false
+=======
+        self.navigationController?.pushViewController(chatVC, animated: true)
+        
+>>>>>>> 850b97f975f3db997bb09dfaea6ca1b601a7ffcd
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
