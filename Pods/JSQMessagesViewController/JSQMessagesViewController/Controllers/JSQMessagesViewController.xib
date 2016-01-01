@@ -18,22 +18,14 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-2b-4LK" customClass="JSQMessagesCollectionView">
-<<<<<<< HEAD
                     <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-=======
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
->>>>>>> 850b97f975f3db997bb09dfaea6ca1b601a7ffcd
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewLayout key="collectionViewLayout" id="dZl-7C-LHR" customClass="JSQMessagesCollectionViewFlowLayout"/>
                     <cells/>
                 </collectionView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-Az-3DM" customClass="JSQMessagesInputToolbar">
-<<<<<<< HEAD
                     <rect key="frame" x="0.0" y="475" width="320" height="44"/>
-=======
-                    <rect key="frame" x="0.0" y="480" width="320" height="44"/>
->>>>>>> 850b97f975f3db997bb09dfaea6ca1b601a7ffcd
                     <animations/>
                     <color key="backgroundColor" red="1" green="0.028247349620000001" blue="0.029582366870000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -48,13 +40,8 @@
                 <constraint firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="MmF-oh-Y75"/>
                 <constraint firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="O9u-TA-A0e"/>
-<<<<<<< HEAD
                 <constraint firstAttribute="bottom" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="Oxz-X3-QMy"/>
                 <constraint firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="bv8-tv-xm9"/>
-=======
-                <constraint firstAttribute="bottom" secondItem="l9u-2b-4LK" secondAttribute="bottom" constant="88" id="Oxz-X3-QMy"/>
-                <constraint firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" constant="44" id="bv8-tv-xm9"/>
->>>>>>> 850b97f975f3db997bb09dfaea6ca1b601a7ffcd
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="dCQ-DM-Wdj"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
             </constraints>
