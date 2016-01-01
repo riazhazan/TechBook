@@ -28,8 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.navigateToRegisterScreen()
         }
         
-        print("Started Application")
-        
         self.window?.makeKeyAndVisible()
 
         return true
