@@ -243,7 +243,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
             [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
         });
     }
-
+    [self.keyboardController beginListeningForKeyboard];
     [self jsq_updateKeyboardTriggerPoint];
 }
 

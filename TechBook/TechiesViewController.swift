@@ -11,11 +11,14 @@ import UIKit
 let NUMBER_OF_COLUMNS = CGFloat(2)
 let PADDING = CGFloat(2)
 
-class TechiesViewController: UIViewController {
+class TechiesViewController: TBBaseViewController {
 
+    @IBOutlet var usersCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Techies"
+        self.setUpNavigationItems()
+        self.navigationItem.title = "Techies"
         self.initializeVariables()
     }
     
@@ -23,14 +26,16 @@ class TechiesViewController: UIViewController {
     {
        
     }
+    
+    func setUpNavigationItems()
+    {
+        self.navigationItem.setRightBarButtonItem(UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "ClickedMe"), animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section:Int)->Int
     {
@@ -44,6 +49,9 @@ class TechiesViewController: UIViewController {
         
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("UserCollectionCell", forIndexPath: indexPath) as! UserCollectionCell
 
+        cell.layer.borderWidth = 0.1
+        cell.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.layer.cornerRadius = 1
         
         return cell ?? UserCollectionCell()
     }
@@ -53,17 +61,19 @@ class TechiesViewController: UIViewController {
     {
         let totalPadding : CGFloat = (NUMBER_OF_COLUMNS + 1) * PADDING
         let widthToHeigthRatio : CGFloat = 1
-        let cellWidth = (self.view.bounds.size.width - totalPadding) / NUMBER_OF_COLUMNS
+        let cellWidth = (self.view.bounds.size.width - NUMBER_OF_COLUMNS*10 - totalPadding) / NUMBER_OF_COLUMNS - 3
         let cellHeight = cellWidth * widthToHeigthRatio
         return CGSizeMake(cellWidth, cellHeight)
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC :ProfileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: PADDING, bottom: 55, right: PADDING)
+    private let sectionInsets = UIEdgeInsets(top: 10.0, left: PADDING*7, bottom: 10, right: PADDING*7)
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
