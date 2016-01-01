@@ -15,6 +15,7 @@ class ChatViewController: JSQMessagesViewController {
     var incomingBubbleImageData : JSQMessagesBubbleImage!
     
     var m_arrMessageArray:NSMutableArray? = NSMutableArray()
+    
     var messageData : MessagesDTO! = MessagesDTO(msgs: [])
     
     override func viewDidLoad() {
@@ -24,9 +25,7 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Chat"
-
-       
-        self.setUpView()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -36,32 +35,11 @@ class ChatViewController: JSQMessagesViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setUpView()
-        self.keyboardController.beginListeningForKeyboard()
-
     }
     func initializeVariables()
     {
         self.senderId = "12345"
         self.senderDisplayName = "Riaz Hassan"
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil);
-
-    }
-    func keyboardWillHide(notification: NSNotification)
-    {
-   
-        
-    }
-    func keyboardWillShow(notification: NSNotification)
-    {
-        
-        let userInfo = notification.userInfo
-        let keyboardFrame = userInfo?[UIKeyboardFrameBeginUserInfoKey] as! NSValue
-        let keyboardSize = keyboardFrame.CGRectValue().size
-        
-        var rectStart_PROPER: CGRect  = keyboardFrame.CGRectValue()
-        
         
     }
     
@@ -80,10 +58,10 @@ class ChatViewController: JSQMessagesViewController {
             self.collectionView!.collectionViewLayout.messageBubbleFont = UIFont.systemFontOfSize(15)
             self.inputToolbar!.contentView!.textView!.font =  UIFont.systemFontOfSize(15)
         }
-
+        
         self.inputToolbar!.contentView!.rightBarButtonItem!.setTitle("send", forState: UIControlState.Normal)
         self.showLoadEarlierMessagesHeader = false
-        
+        self.inputToolbar!.frame.origin.y = self.view.bounds.height - 90
         self.collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
         self.collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeMake(38, 38)
         let inComing=UINib(nibName: "JSQMessagesCollectionViewCellIncoming", bundle:nil)
@@ -91,13 +69,14 @@ class ChatViewController: JSQMessagesViewController {
         
         let outGoing=UINib(nibName: "JSQMessagesCollectionViewCellOutgoing", bundle:nil)
         collectionView!.registerNib(outGoing, forCellWithReuseIdentifier: "JSQMessagesCollectionViewCellOutgoing")
-        self.inputToolbar!.contentView!.rightBarButtonItem!.titleLabel?.textColor = UIColor.redColor()
+        //self.inputToolbar!.contentView!.rightBarButtonItem!.titleLabel?.textColor = UIColor.redColor()
+
+        self.createTempMessageArray()
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         // Do Nothing
     }
-    
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData!
     {
         return self.messageData.messages.objectAtIndex(indexPath.row) as! JSQMessageData
@@ -253,8 +232,8 @@ class ChatViewController: JSQMessagesViewController {
         self.messageData = MessagesDTO(msgs: self.m_arrMessageArray!)
         self.collectionView!.reloadData()
         self.scrollToBottomAnimated(false)
+        
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
