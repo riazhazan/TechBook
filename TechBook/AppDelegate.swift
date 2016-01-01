@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
        
         self.cutomizeNavigationBarAppearence()
-        
+        self.startLocationManager()
         if ((GeneralUtitlity.getValueFromUserDefaults(LOGGEDIN_TAG)) != nil)
         {
             self.navigateToHomePage()
@@ -38,11 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         UIApplication.sharedApplication().statusBarStyle = .Default
-        let themeColor = UIColor(netHex:0x66CCFF)
+        let themeColor = UIColor(netHex:0x42454A)//UIColor(netHex:0x66CCFF)
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barTintColor = themeColor
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        let font = UIFont.systemFontOfSize(18, weight: UIFontWeightHeavy)
+        var font = UIFont()
+        if #available(iOS 8.2, *) {
+            font = UIFont.systemFontOfSize(18, weight: UIFontWeightHeavy)
+        } else {
+            font = UIFont.systemFontOfSize(18)
+        }
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),  NSFontAttributeName : font]
     }
     
@@ -50,32 +55,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabVC :TBTabViewController = TBTabViewController()
-        UITabBar.appearance().barTintColor = UIColor(netHex:0x66CCFF)
-        
-        let font = UIFont.systemFontOfSize(15, weight: UIFontWeightThin)
+        UITabBar.appearance().barTintColor = UIColor(netHex:0x42454A)//UIColor(netHex:0x66CCFF)
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        var font = UIFont()
+        if #available(iOS 8.2, *) {
+             font = UIFont.systemFontOfSize(15, weight: UIFontWeightThin)
+        } else {
+             font = UIFont.systemFontOfSize(15)
+        }
         
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : font], forState: UIControlState.Normal)
         
         let tecVC :TechiesViewController = storyboard.instantiateViewControllerWithIdentifier("TechiesViewController") as! TechiesViewController
         let mapVC :MapViewController = storyboard.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
-        let chatVC :ChatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController
+        let chatVC :ChatListViewController = storyboard.instantiateViewControllerWithIdentifier("ChatListViewController") as! ChatListViewController
         let profileVC :ProfileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController") as! ProfileViewController
         
         let navController1 : UINavigationController = UINavigationController(rootViewController: tecVC)
-        navController1.title = "Techies"
+        navController1.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "net"), tag: 0)
+        navController1.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        
         let navController2 : UINavigationController = UINavigationController(rootViewController: mapVC)
-        navController2.title = "Map"
+        navController2.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "pin"), tag: 0)
+        navController2.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        
         let navController3 : UINavigationController = UINavigationController(rootViewController: chatVC)
-        navController3.title = "Chat"
+        navController3.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "comments"), tag: 0)
+        navController3.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+        navController3.tabBarItem.badgeValue = "9"
+        
         let navController4 : UINavigationController = UINavigationController(rootViewController: profileVC)
-        navController4.title = "Profile"
+        navController4.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "user"), tag: 0)
+        navController4.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
         
         tabVC.viewControllers = [navController1, navController2, navController3, navController4]
+        
         
         self.window!.rootViewController = tabVC
         
     }
-    
+    func startLocationManager()
+    {
+        if(CLLocationManager.locationServicesEnabled()){
+            
+            if(CLLocationManager.authorizationStatus() ==   CLAuthorizationStatus.Denied){
+                
+               //Denied permision
+            }
+        }
+
+    }
     
     func navigateToRegisterScreen()
     {
